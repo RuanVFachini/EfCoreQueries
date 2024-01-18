@@ -24,7 +24,7 @@ namespace EfCoreQueries.Exemplos
 
             //Exemplo 2
             Console.WriteLine($"A Consutla abaixo não é compatível com os operadores do banco de dados:\r\n");
-            Console.WriteLine($"Só é possível efetuar o select dos campos presentes na cláusula de Join");
+            Console.WriteLine($"Só é possível efetuar o select dos campos presentes na cláusula de GroupBy ou funções matemáticas de agregação [Em versões mais recentes do Entity Framework é possível utilizar agregações mais complexas]");
 
             var query2 = from aluno in Context.Alunos
                          group aluno by aluno.Nome.Substring(0, 3) into alunoGroup
